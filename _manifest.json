@@ -1,0 +1,41 @@
+{
+  "manifest_version": 2,
+  "id": "aaorxilv.mai_evolve",
+  "name": "麦进化",
+  "version": "0.1.0",
+  "description": "守护人设边界，审计回复风格，并沉淀有证据的会话默契。",
+  "author": {
+    "name": "aaorxilv"
+  },
+  "license": "GPL-3.0-or-later",
+  "host_application": {
+    "min_version": "1.4.8",
+    "max_version": "1.4.99"
+  },
+  "sdk": {
+    "min_version": "2.21.0",
+    "max_version": "2.23.99"
+  },
+  "plugin_type": "chat",
+  "display": {
+    "icon": {
+      "type": "local",
+      "value": "assets/logo.png",
+      "fallback": "shield-check",
+      "background": "#e9f3ed"
+    }
+  },
+  "capabilities": [
+    "api.call",
+    "custom_pages",
+    "database.get",
+    "database.save",
+    "llm.generate"
+  ],
+  "i18n": {
+    "default_locale": "zh-CN",
+    "supported_locales": [
+      "zh-CN"
+    ]
+  }
+}

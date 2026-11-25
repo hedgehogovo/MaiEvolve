@@ -1,0 +1,124 @@
+{
+  "schema_version": 2,
+  "required_capabilities": [
+    "custom_pages"
+  ],
+  "pages": [
+    {
+      "id": "mai-evolve",
+      "title": "麦进化",
+      "mode": "custom",
+      "entry": "webui/index.html",
+      "layout": "document",
+      "queries": {
+        "dashboard": {
+          "api": "dashboard",
+          "version": "1",
+          "parameters": {}
+        }
+      },
+      "actions": {
+        "save_settings": {
+          "api": "save_settings",
+          "version": "1",
+          "parameters": {
+            "enabled": {
+              "type": "boolean",
+              "required": true
+            },
+            "audit_enabled": {
+              "type": "boolean",
+              "required": true
+            },
+            "audit_interval_minutes": {
+              "type": "integer",
+              "required": true,
+              "minimum": 1,
+              "maximum": 1440
+            },
+            "idle_minutes": {
+              "type": "integer",
+              "required": true,
+              "minimum": 5,
+              "maximum": 1440
+            },
+            "reflection_night_start": {
+              "type": "string",
+              "required": true,
+              "pattern": "^(?:[01]\\d|2[0-3]):[0-5]\\d$"
+            },
+            "reflection_night_end": {
+              "type": "string",
+              "required": true,
+              "pattern": "^(?:[01]\\d|2[0-3]):[0-5]\\d$"
+            },
+            "recent_turns": {
+              "type": "integer",
+              "required": true,
+              "minimum": 2,
+              "maximum": 40
+            },
+            "max_calls_per_day": {
+              "type": "integer",
+              "required": true,
+              "minimum": 0,
+              "maximum": 1000
+            },
+            "critic_task_name": {
+              "type": "string",
+              "required": true,
+              "max_length": 100
+            },
+            "critic_timeout_seconds": {
+              "type": "integer",
+              "required": true,
+              "minimum": 10,
+              "maximum": 300
+            },
+            "minimum_safe_score": {
+              "type": "integer",
+              "required": true,
+              "minimum": 50,
+              "maximum": 100
+            },
+            "issue_window": {
+              "type": "integer",
+              "required": true,
+              "minimum": 3,
+              "maximum": 20
+            },
+            "issue_threshold": {
+              "type": "integer",
+              "required": true,
+              "minimum": 2,
+              "maximum": 20
+            },
+            "constraint_ttl_hours": {
+              "type": "integer",
+              "required": true,
+              "minimum": 1,
+              "maximum": 720
+            },
+            "constraint_ttl_turns": {
+              "type": "integer",
+              "required": true,
+              "minimum": 1,
+              "maximum": 200
+            },
+            "strategy_max_items": {
+              "type": "integer",
+              "required": true,
+              "minimum": 1,
+              "maximum": 20
+            },
+            "persona_anchors": {
+              "type": "string",
+              "required": true,
+              "max_length": 3000
+            }
+          }
+        }
+      }
+    }
+  ]
+}
