@@ -5,9 +5,13 @@
   "version": "0.1.0",
   "description": "守护人设边界，审计回复风格，并沉淀有证据的会话默契。",
   "author": {
-    "name": "aaorxilv"
+    "name": "aaorxilv",
+    "url": "https://github.com/hedgehogovo"
   },
   "license": "GPL-3.0-or-later",
+  "urls": {
+    "repository": "https://github.com/hedgehogovo/MaiEvolve"
+  },
   "host_application": {
     "min_version": "1.4.8",
     "max_version": "1.4.99"
